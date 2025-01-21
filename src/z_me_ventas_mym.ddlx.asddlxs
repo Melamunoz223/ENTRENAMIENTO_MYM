@@ -1,0 +1,35 @@
+@Metadata.layer: #CORE
+@UI:{headerInfo:{typeName: 'Reporte',
+                typeNamePlural: 'Reportes',
+                title:{type: #STANDARD,
+                        label: 'Reporte',
+                        value: 'id'
+                        }
+                 }
+     }
+annotate view z_c_ventas_mym with
+{
+  @UI.facet :[ { id: 'Cabecera',
+                 purpose: #STANDARD,
+                 type: #IDENTIFICATION_REFERENCE,
+                 label: 'Cabecera'}]
+  @UI: { lineItem: [{ position: 10, label: 'ID', importance: #HIGH }] }
+  Id;
+  @UI: { lineItem: [{ position: 20, label: 'Email', importance: #HIGH }] }
+  Email;
+  @UI: { lineItem: [{ position: 30, label: 'First Name', importance: #HIGH }] }
+  Firstname;
+  @UI: { lineItem: [{ position: 40, label: 'Last Name', importance: #HIGH }] }
+  Lastname;
+  @UI: { lineItem: [{ position: 50, label: 'Country', importance: #HIGH }] }
+  Country;
+  @UI: { lineItem: [{ position: 60, label: 'Createon', importance: #HIGH }] }
+  Createon;
+  @UI: { lineItem: [{ position: 70, label: 'Delivereddate', importance: #HIGH }] }
+  Delivereddate;
+  @UI: { lineItem: [{ position: 80, label: 'Orderstatus', importance: #HIGH }] }
+  Orderstatus;
+  @UI: { lineItem: [{ position: 90, label: 'Imageurl', importance: #HIGH }] }
+  Imageurl;
+
+}
