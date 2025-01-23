@@ -1,0 +1,58 @@
+@Metadata.layer: #CORE
+@UI:{headerInfo:{typeName: 'items',
+                typeNamePlural: 'items',
+                title:{type: #STANDARD,
+                        label: 'items',
+                        value: 'id'
+                        }
+                 }
+     }
+annotate view z_c_items_mym
+    with 
+{
+  @UI.facet :[ { id: 'items',
+                 purpose: #STANDARD,
+                 type: #IDENTIFICATION_REFERENCE,
+                 label: 'items'}]
+  @UI: { lineItem: [{ position: 10, label: 'ID', importance: #HIGH }]}
+// identification : [{ position: 10, label: 'ID'}]}
+   Id;
+    @UI: { lineItem: [{ position: 20, label: 'NAME', importance: #HIGH }]}
+  //                     identification : [{ position: 20, label: 'NAME'}]}
+  
+   Name;
+    @UI: { lineItem: [{ position: 30, label: 'Description', importance: #HIGH }]}
+   //                    identification : [{ position: 30, label: 'Description'}]}
+  
+   Description;
+    @UI: { lineItem: [{ position: 40, label: 'Releasedate', importance: #HIGH }]}
+ //                   identification : [{ position: 40, label: 'Releasedate'}]}
+  
+   Releasedate;
+    @UI: { lineItem: [{ position: 50, label: 'Discontinueddate', importance: #HIGH }]}
+//                       identification : [{ position: 50, label: 'Discontinueddate'}]}
+  
+   Discontinueddate;
+    @UI: { lineItem: [{ position: 60, label: 'Price', importance: #HIGH }]}
+//                       identification : [{ position: 60, label: 'Price'}]}
+//  
+   Price;
+    @UI: { lineItem: [{ position: 70, label: 'Height', importance: #HIGH }]}
+//                       identification : [{ position: 70, label: 'Height'}]}
+  
+   Height;
+    @UI: { lineItem: [{ position: 80, label: 'Widht', importance: #HIGH }]}
+//                       identification : [{ position: 80, label: 'Widht'}]}
+//  
+   Widht;
+    @UI: { lineItem: [{ position: 90, label: 'Depth', importance: #HIGH }]}
+//                       identification : [{ position: 90, label: 'Depth'}]}
+  
+   Depth;
+    @UI: { lineItem: [{ position: 100, label: 'Quanity', importance: #HIGH }]}
+//                       identification : [{ position: 100, label: 'Quanity'}]}
+  
+   Quanity;
+
+    
+}

@@ -1,4 +1,5 @@
 @EndUserText.label: 'sd ventas'
 define service Z_sd_ventas_mym {
-  expose z_c_ventas_mym as ventas;
+  expose z_c_ventas_mym;
+  expose z_c_items_mym;
 }

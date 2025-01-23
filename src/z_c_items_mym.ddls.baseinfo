@@ -3,12 +3,10 @@
 {
 "FROM":
 [
-"Z_I_VENTAS_MYM"
+"Z_I_ITEMS_MYM"
 ],
 "ASSOCIATED":
-[
-"Z_C_ITEMS_MYM"
-],
+[],
 "BASE":
 [],
 "ANNO_REF":

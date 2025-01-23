@@ -1,35 +1,70 @@
-@Metadata.layer: #CORE
-@UI:{headerInfo:{typeName: 'Reporte',
-                typeNamePlural: 'Reportes',
+    @Metadata.layer: #CORE
+@UI:{headerInfo:{typeName: 'ORDENES',
+                typeNamePlural: 'ORDENES',
                 title:{type: #STANDARD,
-                        label: 'Reporte',
+                        label: 'ORDENES',
                         value: 'id'
                         }
                  }
      }
 annotate view z_c_ventas_mym with
 {
-  @UI.facet :[ { id: 'Cabecera',
+  @UI.facet :[ { id: 'HEADER',
                  purpose: #STANDARD,
                  type: #IDENTIFICATION_REFERENCE,
                  label: 'Cabecera'}]
-  @UI: { lineItem: [{ position: 10, label: 'ID', importance: #HIGH }] }
-  Id;
-  @UI: { lineItem: [{ position: 20, label: 'Email', importance: #HIGH }] }
+  @UI: { lineItem: [{ position: 10, label: 'ID', importance: #HIGH }],
+                       identification : [{ position: 10, label: 'ID'}]}
+  
+  Id; 
+  @UI: { lineItem: [{ position: 20, label: 'Email', importance: #HIGH }],
+                        identification : [{ position: 20, label: 'Email'}]}         
   Email;
-  @UI: { lineItem: [{ position: 30, label: 'First Name', importance: #HIGH }] }
+  @UI: { lineItem: [{ position: 30, label: 'First Name', importance: #HIGH }],
+                      identification : [{ position: 30, label: 'First Name'}] }
   Firstname;
-  @UI: { lineItem: [{ position: 40, label: 'Last Name', importance: #HIGH }] }
+  @UI: { lineItem: [{ position: 40, label: 'Last Name', importance: #HIGH }], 
+                      identification : [{ position: 40, label: 'Last Name'}] }
   Lastname;
-  @UI: { lineItem: [{ position: 50, label: 'Country', importance: #HIGH }] }
+  @UI: { lineItem: [{ position: 50, label: 'Country', importance: #HIGH }],
+                      identification : [{ position: 50, label: 'Country'}] } 
   Country;
-  @UI: { lineItem: [{ position: 60, label: 'Createon', importance: #HIGH }] }
+  @UI: { lineItem: [{ position: 60, label: 'Createon', importance: #HIGH }],
+                      identification : [{ position: 60, label: 'Createon'}] }
   Createon;
-  @UI: { lineItem: [{ position: 70, label: 'Delivereddate', importance: #HIGH }] }
+  @UI: { lineItem: [{ position: 70, label: 'Delivereddate', importance: #HIGH }],
+                      identification : [{ position: 70, label: 'Delivereddate'}] }
   Delivereddate;
-  @UI: { lineItem: [{ position: 80, label: 'Orderstatus', importance: #HIGH }] }
+  @UI: { lineItem: [{ position: 80, label: 'Orderstatus', importance: #HIGH }],
+                      identification : [{ position: 80, label: 'Orderstatus'}] }
   Orderstatus;
-  @UI: { lineItem: [{ position: 90, label: 'Imageurl', importance: #HIGH }] }
+  @UI: { lineItem: [{ position: 90, label: 'Imageurl', importance: #HIGH }],
+                      identification : [{ position: 90, label: 'Imageurl'}] } 
   Imageurl;
+  
+  @UI.facet: [{ id: 'Items',
+              purpose: #STANDARD,
+              type: #LINEITEM_REFERENCE,
+              label: 'Items',  
+              position: 100,  
+              targetElement: '_ITEMS' }]
+
+  @UI: {
+  lineItem: [
+    { position: 100, label: 'Id', importance: #HIGH },
+    { position: 110, label: 'Name', importance: #HIGH },
+    { position: 120, label: 'Description', importance: #HIGH },
+    { position: 130, label: 'Releasedate', importance: #HIGH },
+    { position: 140, label: 'Discontinueddate', importance: #HIGH },
+    { position: 150, label: 'Price', importance: #HIGH },
+    { position: 160, label: 'Height', importance: #HIGH },
+    { position: 170, label: 'Widht', importance: #HIGH },
+    { position: 180, label: 'Depth', importance: #HIGH },
+    { position: 190, label: 'Quantity', importance: #HIGH }
+  ]
+}
+  _Items;
+  
+
 
 }

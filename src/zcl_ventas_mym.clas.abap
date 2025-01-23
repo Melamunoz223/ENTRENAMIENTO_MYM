@@ -17,10 +17,31 @@ CLASS zcl_ventas_mym IMPLEMENTATION.
 
 
       DATA:
-      ltd_header TYPE STANDARD TABLE OF ztheader_mym.
+      ltd_header TYPE STANDARD TABLE OF ztheader_mym,
+      ltd_items  TYPE STANDARD TABLE OF ztitems_mym.
 
       out->write( |Delete   -> Travel ztb_booking_8712| ).
       DELETE FROM ztheader_mym.
+      ltd_items = VALUE #( ( id               = '0000005001'
+                           name             = 'material'
+*                           description      = 'adkowodfiju'
+*                           releasedate      =  '20240228'
+*                           discontinueddate =  '20240228'
+*                           price            =  '4845'
+*                           height           = '796'
+*                           widht            =  '7456'
+*                           depth            =  '8956'
+*                           quanity          =  '265'
+                          )
+
+                          ).
+
+
+
+        INSERT ztitems_mym FROM TABLE @ltd_items.
+
+
+
 
       ltd_header
               = VALUE #(

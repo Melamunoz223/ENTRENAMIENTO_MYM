@@ -1,14 +1,16 @@
-managed; //implementation in class zbp_i_ventas_mym unique;
+ managed; //implementation in class zbp_i_ventas_mym unique;
 //strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
-
+//
 define behavior for z_i_ventas_mym alias ventas
 persistent table ztheader_mym
 lock master
-//authorization master ( instance )
-//etag master <field_name>
+////authorization master ( instance )
+////etag master <field_name>
 {
   create;
   update;
   delete;
-  field ( readonly ) id;
+ field (readonly : update)  id, email, imageurl;
+// association _ITEMS {create;}
+//
 }
